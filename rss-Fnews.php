@@ -11,13 +11,12 @@
 				$desc = $data->getElementsByTagName("description")->item(0)->nodeValue;
 				$image = $data->getElementsByTagName("name")->item(0)->nodeValue;
 				$pub = $data->getElementsByTagName("pubDate")->item(0)->nodeValue;
-			echo "<div><ul class = 'nge'>
-			<h1><li>'$title'</li></h1></ul>
-				<ul class = 'meow'>
-				<li><a href = '$link' target = '_blank' class = 'anchor'>$link</a></li>
-				<li>$desc</li>
+			echo "<div><ul class = 'page'>
+			<h1><li><a href = '$link' target = '_blank' class = 'anchor'>'$title'</a></li></h1></ul>
+				<ul class = 'topic'>
+				<h2><li>$desc</li></h2>
 				<li><a href = '$image' target = '_blank' class = 'anchor'>$image</a></li>
-				<li>$pub</li>
+				<h4><li>$pub</li></h4>
 				</ul></div>";
 	}
 			?>
