@@ -1,11 +1,5 @@
 <?php
 $module = (isset($_GET['mod']) && $_GET['mod'] != '') ? $_GET['mod'] : '';
-
-$jsonqoutes = file_get_contents('https://cottonbureau.com/shop');
-$qoutesdata = json_decode($jsonqoutes,true);
-
-$qoutes = array('hue'=> $qoutesdata);
-$list = $qoutes['hue'];
 ?>
 <html>
 <head>
@@ -27,7 +21,6 @@ $list = $qoutes['hue'];
     </li>
   </ul>
 </nav>
-
 	<div id="container">
 		<?php
 		switch ($module) {
@@ -40,23 +33,6 @@ $list = $qoutes['hue'];
 		}
 			 ?>
 		 </div>
-		<ul>
-            <?php
-            $count = 0;
-            foreach((array) $list as $value){
-            ?>
-                <li><?php echo $value['title'];?>
-                    <ul>
-                        <li><?php echo $value['designerName'];?></li>
-                    </ul>
-                </li>
-            <?php
-                $count++;
-                if($count == 20) //limit output to 20
-                    break;
-            }
-            ?>
-            </ul>
 </body>
 <div class="footer"></div>
 </html>
