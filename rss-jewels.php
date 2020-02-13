@@ -10,11 +10,12 @@
 				$link = $data->getElementsByTagName("link")->item(0)->nodeValue;
 				$desc = $data->getElementsByTagName("description")->item(0)->nodeValue;
 				$pub = $data->getElementsByTagName("pubDate")->item(0)->nodeValue;
-			echo "<table border="1px">
-			<tr><h1><a href = '$link' target = '_blank' class = 'anchor'>'$title'</a></h1><br>
-				<h2>$desc</h2><br>
-				<h4>$pub</h4><br>
-				</tr></table>";
+			echo "<div>
+			<h1 ><li><a href = '$link' target = '_blank' class = 'anchor'>'$title'</a></li></h1>
+				<ul class = 'topic'>
+				<h2><li>$desc</li></h2>
+				<h4><li>$pub</li></h4>
+				</ul><br><br></div>";
 	}
 			?>
 <style>
